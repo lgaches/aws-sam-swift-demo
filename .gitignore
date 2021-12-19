@@ -1,0 +1,12 @@
+# Swift
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+.swiftpm/
+
+# AWS Serverless Application Model
+.aws-sam
+samconfig.toml

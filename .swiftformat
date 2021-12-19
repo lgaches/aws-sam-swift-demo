@@ -1,0 +1,20 @@
+# Minimum swiftformat version
+--minversion 0.48.11
+
+# file options
+
+--swiftversion 5.5
+--exclude .build
+
+# format options
+
+--self insert
+--patternlet inline
+--stripunusedargs unnamed-only
+--ifdef no-indent
+--extensionacl on-declarations
+--disable typeSugar
+--disable andOperator
+--disable wrapMultilineStatementBraces
+--disable enumNamespaces
+--disable redundantExtensionACL
