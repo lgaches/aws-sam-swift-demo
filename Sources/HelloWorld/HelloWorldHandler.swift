@@ -1,5 +1,6 @@
 import AWSLambdaEvents
 import AWSLambdaRuntime
+import Core
 
 @main
 struct HelloWorldHandler: LambdaHandler {
@@ -9,6 +10,10 @@ struct HelloWorldHandler: LambdaHandler {
     init(context: Lambda.InitializationContext) async throws {}
 
     func handle(_ event: APIGatewayRequest, context: LambdaContext) async throws -> APIGatewayResponse {
-        APIGatewayResponse(statusCode: .ok, body: "Hello Swift!!!")
+        if let name = event.queryStringParameters?["name"], name.isNotEmpty {
+            return APIGatewayResponse(statusCode: .ok, body: "Hello \(name)!!!")
+        } else {
+            return APIGatewayResponse(statusCode: .ok, body: "Hello Swift!!!")
+        }
     }
 }

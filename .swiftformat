@@ -18,3 +18,4 @@
 --disable wrapMultilineStatementBraces
 --disable enumNamespaces
 --disable redundantExtensionACL
+--disable trailingCommas
